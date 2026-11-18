@@ -156,7 +156,7 @@ static const void *kBCVRowEntryKey = &kBCVRowEntryKey;
         selectButton.translatesAutoresizingMaskIntoConstraints = NO;
         selectButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
         selectButton.titleLabel.font = [UIFont systemFontOfSize:16];
-        selectButton.contentEdgeInsets = UIEdgeInsetsMake(0, 12, 0, 4);
+        UIButtonConfiguration *selectConfiguration = [UIButtonConfiguration plainButtonConfiguration]; selectConfiguration.contentInsets = NSDirectionalEdgeInsetsMake(0, 12, 0, 4); selectButton.configuration = selectConfiguration;
         UIButton *editButton = [UIButton buttonWithType:UIButtonTypeSystem];
         editButton.translatesAutoresizingMaskIntoConstraints = NO;
         [editButton setTitle:@"✎" forState:UIControlStateNormal];
